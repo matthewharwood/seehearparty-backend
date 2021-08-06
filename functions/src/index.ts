@@ -28,3 +28,8 @@ export const giphyByKeyword = functions.https.onRequest(
     }
   }
 );
+
+export const createGame = functions.https.onRequest((request, response) => {
+    response.send(btoa(new Date().toISOString()));
+    // save this to firebasebase
+})
